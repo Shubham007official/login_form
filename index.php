@@ -5,7 +5,7 @@
     <title>Login Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-img">
     <div class="container">
         <h2>Login</h2>
         <form class="login-form" action="" method="post">

@@ -5,7 +5,7 @@
     <title>Login Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-img">
+<body>
     <div class="container">
         <h2>Login</h2>
         <form class="login-form" action="" method="post">
@@ -20,7 +20,7 @@
             <button type="submit">Log In</button>
         </form>
     </div>
-    <?php
+     <?php
     require_once('save_login.php');
     ?>
 </body>
